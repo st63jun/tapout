@@ -31,7 +31,7 @@ module Tapout::Reporters
       @i += 1
       #desc = entry['message'] #+ " #{ok.arguments.inspect}"
 
-      puts "ok #{@i} - #{entry['label']} # skip"
+      puts "ok #{@i} - #{entry['label']} # skip #{entry['exception']['message']}"
     end
 
     #
