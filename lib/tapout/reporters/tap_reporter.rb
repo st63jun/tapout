@@ -25,6 +25,16 @@ module Tapout::Reporters
     #end
 
     #
+    def omit(entry)
+      super(entry)
+
+      @i += 1
+      #desc = entry['message'] #+ " #{ok.arguments.inspect}"
+
+      puts "ok #{@i} - #{entry['label']} # skip"
+    end
+
+    #
     def pass(entry)
       super(entry)
 

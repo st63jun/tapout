@@ -157,9 +157,9 @@ module Tapout
           when 'error'
             @exit_code = -1
             error(entry)
-          when 'omit'
+          when 'omit', 'skip'
             omit(entry)
-          when 'todo', 'skip', 'pending'
+          when 'todo', 'pending'
             todo(entry)
           end
           finish_test(entry)
